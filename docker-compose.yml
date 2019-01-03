@@ -1,0 +1,28 @@
+version: '3.5'
+
+networks:
+  proxy:
+    external: true
+  default:
+    driver: bridge
+
+services:
+
+  react:
+    container_name: accuimages
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - '.:/usr/src/app'
+      - '/usr/src/app/node_modules'
+    ports:
+      - '3000:3000'
+    environment:
+      - NODE_ENV=development
+    labels:
+      - "traefik.frontend.rule=Host:accuimages.traefik.localhost"
+      - "traefik.docker.network=proxy"
+    networks:
+      - proxy
+      - default
