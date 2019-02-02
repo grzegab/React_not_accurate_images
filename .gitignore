@@ -24,3 +24,5 @@ yarn-debug.log*
 yarn-error.log*
 /package-lock.json
 /src/api/credentials.js
+/src/api/unsplashCredentials.js
+/src/api/youtubeCredentials.js

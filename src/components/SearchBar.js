@@ -26,7 +26,7 @@ class SearchBar extends React.Component {
                                     <option value='image'>Images</option>
                                     <option value="video">YT Videos</option>
                                 </select>
-                                <div className="ui button">Search</div>
+                                <div className="ui button" onClick={this.onFormSubmit}>Search</div>
                             </div>
                         </div>
                     </form>
