@@ -21,7 +21,7 @@ services:
     environment:
       - NODE_ENV=development
     labels:
-      - "traefik.frontend.rule=Host:accuimages.traefik.localhost"
+      - "traefik.frontend.rule=Host:accuimages.grzegab.eu"
       - "traefik.docker.network=proxy"
     networks:
       - proxy
