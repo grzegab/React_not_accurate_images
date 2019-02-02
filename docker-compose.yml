@@ -21,7 +21,7 @@ services:
     expose:
       - "80"
     environment:
-      - NODE_ENV=development
+      - NODE_ENV=production
     labels:
       - "traefik.frontend.rule=Host:accuimages.grzegab.eu"
       - "traefik.docker.network=proxy"
